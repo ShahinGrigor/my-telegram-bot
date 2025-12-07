@@ -712,11 +712,9 @@ async def contact_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) -
 💰 *Стоимость:* от 15.000 ₽
 """
     
+    # Создаем кнопку БЕЗ URL (просто текст)
     keyboard = [
-        [
-            InlineKeyboardButton("💬 Написать в Telegram", url="https://t.me/@GrigoryShag"),
-            InlineKeyboardButton("📧 Отправить email", url="gregoryshaginyan@yandex.ru")
-        ],
+        [InlineKeyboardButton("💬 Написать в Telegram", url="https://t.me/GrigoryShag")],
         [InlineKeyboardButton("🔙 Назад", callback_data="main")]
     ]
     
@@ -854,3 +852,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
